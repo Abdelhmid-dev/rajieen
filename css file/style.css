@@ -1,0 +1,698 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+body {
+    font-family : "Open Sans", sans-serif;
+}
+
+/* root values */
+
+:root {
+    --main-color : #f44336;
+    --red-color : #e91e63; /* Pink */
+    --cyan-color : #00bcd4; /* Cyan */
+    --low-blue-color : #2196f3; /* Light Blue */
+    --dark-blue-color : #3f51b5; /* Dark Blue */
+    --puprle-color : #9c27b0; /* Purple */
+    --green-color : #4caf50; /* Green */
+    --text-color : #333; /* Dark Gray */
+    --font-family : 'Arial', sans-serif; /* Font Family */
+}
+
+/* Global styles */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* End of Gloable  */
+/* Contact Side Start */
+
+.contact {
+    position : fixed;
+    top : 140px;
+    width : 60px;
+    z-index : 2;
+    right : -30px;
+}
+
+.contact i {
+    color: white;
+    background-color: var(--low-blue-color);
+    display: block;
+    width: 40px;
+    padding: 5px 8px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 10px 0;
+    border-radius: 35%;
+    transition: all 0.4s ease;
+}
+
+.contact i:hover {
+    color : var(--dark-blue-color);
+}
+
+/* Contact Side End */
+/* Header Start */
+
+.landing {
+    padding-top : 50px;
+    padding-bottom : 50px;
+    background-image : url("./images/img3.jpg");
+    background-size : cover;
+    background-position : center center;
+    min-height : 100vh;
+    transition : all 0.4s ease-in-out;
+    position : relative;
+}
+
+.landing .header-area .logo {
+    width : 20%;
+}
+
+.landing .header-area .logo img {
+    width : 250px;
+    margin-top : 15px;
+    cursor : pointer;
+    margin-left : -20px;
+}
+
+@media (max-width : 767px) {
+    .landing .header-area .logo {
+        width : 50% !important;
+    }
+}
+
+.landing .overlay {
+    position : absolute;
+    left : 0;
+    top : 0;
+    background-color : rgba(0, 0, 0, 0.7);
+    width : 100%;
+    height : 100%;
+    z-index : 1;
+}
+
+.landing .header-area {
+    color : white;
+    display : flex;
+    justify-content : space-between;
+    position : relative;
+    z-index : 2;
+    padding : 0 20px;
+    align-items : center;
+}
+
+.landing .header-area .logo a {
+    font-size : 45px;
+    font-weight : bold;
+    cursor : pointer;
+}
+
+@media (max-width : 500px) {
+    .landing .header-area .logo a {
+        font-size : 30px;
+    }
+}
+
+.landing .header-area .links .links-section {
+    display : flex;
+    width : 104%;
+    justify-content : flex-end;
+    margin-top : 10px;
+}
+
+@media (max-width : 767px) {
+    .landing .header-area .links .links-section {
+        display : none;
+    }
+    .landing .header-area .links .logo {
+        width : 50% !important;
+    }
+}
+
+.landing .header-area .links .links-section li {
+    margin : 0;
+    padding : 0;
+}
+
+.landing .header-area .links .links-section li a {
+    font-size : 18px;
+    margin-right : 18px;
+    transition : all 0.4s ease;
+    font-size : 20px;
+}
+
+.landing .header-area .links .links-section li a:hover {
+    color : var(--low-blue-color)
+}
+
+.landing .header-area .links .toggle-menu {
+    width : 30px;
+    height : 20px;
+    position : relative;
+    top : -15px;
+    z-index : 10;
+    padding : 0 20px;
+    cursor : pointer;
+}
+
+.landing .header-area .links .links-container {
+    margin-top : 3px;
+    width : 100%;
+    position : relative;
+    top : 0px;
+    z-index : 1;
+    padding : 20px;
+}
+
+@media (max-width : 767px) {
+    .landing .header-area .links .links-container.open {
+        position : absolute;
+        top : 90px;
+        border-radius : 5px;
+        background-color : #FFF;
+        z-index : 1000;
+        flex-direction : column;
+        left : 0;
+        width : 100%;
+        min-height : 200px;
+        padding : 10px;
+    }
+
+    .landing .header-area .links-container.open .links-section {
+        display : flex;
+        flex-direction : column;
+        align-items : center;
+        width : 100%;
+    }
+
+    .landing .header-area .links .links-section li  {
+        color : black;
+        margin : 10px 0;
+        width : 100%;
+        text-align : center;
+    }
+}
+
+.landing .header-area .links .toggle-menu span {
+    width : 25px;
+    height : 3px;
+    background-color : white;
+    display : block;
+    margin : 4px 0 0 -10px;
+    transition : all 0.4s ease;
+}
+
+.landing .header-area .links .toggle-menu.event {
+    margin-top : 25px;
+}
+
+.landing .header-area .links .toggle-menu.event span {
+    background-color : var(--low-blue-color);
+}
+
+.landing .header-area .links .toggle-menu.event span:first-child {
+    transform : rotate(45deg);
+    top : 6px;
+    position : absolute; 
+}
+
+.landing .header-area .links .toggle-menu.event span:nth-child(2) {
+    display : none;
+}
+
+.landing .header-area .links .toggle-menu.event span:last-child {
+    transform : rotate(-45deg);
+    top : 6px;
+    position : absolute; 
+}
+
+.landing .intro-text {
+    position : absolute;
+    left : 50%;
+    top : 50%;
+    transform : translate(-50%, -50%);
+    text-align : center;
+    color : white;
+    z-index : 1;
+}
+
+@media (max-width : 500px) {
+    .landing .intro-text {
+        top : 60% !important;
+    }
+    .landing .header-area .links .links-container.open {
+        top : 75px !important;
+    }
+    .landing .intro-text h2 {
+        font-size : 25px !important;
+    }
+    .landing .intro-text p {
+        font-size : 15px !important;
+    }
+    .landing .intro-text .links {
+        flex-direction : column;
+        gap : 15px;
+    }
+    .landing .intro-text .links a {
+        font-size : 12px !important;
+    }
+}
+
+.landing .intro-text h2 {
+    font-size : 40px;
+    margin-bottom : 20px;
+    font-weight : bold;
+}
+
+.landing .intro-text p {
+    font-size : 20px;
+    color : #dddd;
+}
+
+.landing .intro-text h1 span {
+    color : var(--low-blue-color);
+}
+
+.landing .intro-text .links {
+    margin-top : 30px;
+    display : inline-flex;
+}
+
+.landing .intro-text .links a {
+    background-color : var(--low-blue-color);
+    color : white;
+    padding : 10px 20px;
+    border-radius : 10px;
+    margin : 0 10px;
+    transition : all 0.5s ease;
+}
+
+.landing .intro-text .links a:hover {
+    background-color : var(--cyan-color);
+    color : white;
+}
+
+/* Header End */
+/* About Start */
+
+.about {
+    padding-top : 50px;
+    padding-bottom : 50px;
+    background-color : #EEE;
+}
+
+.about .text {
+    text-align : center;
+    margin-top : 60px;
+    margin-bottom : 60px;
+}
+
+.about .text h2 {
+    font-size : 45px;
+    margin-bottom : 20px;
+    font-weight : bold;
+}
+
+.about .text p {
+    font-size : 20px;
+    color : #666;
+    margin : 20px 0;
+    padding : 20px;
+}
+
+.about .images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 16px;
+    justify-content: center;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 10px;
+}
+
+.about .images img {
+    width: 30%; 
+    height: 500px;
+    max-width: 100%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 15px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    position: relative;
+    border: 1px solid #ddd;
+    filter: grayscale(100%);
+    transition: all 0.1s ease;
+}
+
+.about .images img:first-child {
+    transition-delay : 100ms;
+}
+
+.about .images img:nth-child(2) {
+    transition-delay : 200ms;
+}
+
+.about .images img:nth-child(3) {
+    transition-delay : 300ms;
+}
+
+.about .images img:nth-child(4) {
+    transition-delay : 400ms;
+}
+
+.about .images img:nth-child(5) {
+    transition-delay : 500ms;
+}
+
+.about .images img:nth-child(6) {
+    transition-delay : 600ms;
+}
+
+.about .images img:nth-child(7) {
+    transition-delay : 700ms;
+}
+
+.about .images img:nth-child(8) {
+    transition-delay : 800ms;
+}
+
+.about .images img:nth-child(9) {
+    transition-delay : 900ms;
+}
+
+.about .images .hid {
+    opacity : 0;
+    transition : all 0.4s linear;
+}
+
+.about .images .show {
+    opacity : 1;
+}
+
+@media (max-width : 600px) {
+    .about .images img {
+        width : 95%;
+        margin : 20px auto;
+    }
+}
+
+@media (min-width : 600px) and (max-width : 1010px) {
+    .about .images img {
+        width : 45%;
+    }
+}
+
+.about .images img:hover {
+    transform : scale(1.05);
+    filter : grayscale(0%);
+}
+
+/* About End */
+/* Travel Agncey Start */
+
+.travel {
+    padding-top : 50px;
+    padding-bottom : 50px;
+}
+
+.travel .text {
+    text-align : center;
+    margin-bottom : 60px;
+}
+
+.travel .text h2 {
+    font-size : 45px;
+    margin-bottom : 20px;
+    font-weight : bold;
+}
+
+.travel .text p {
+    font-size : 20px;
+    color : #666;
+    padding : 20px;
+}
+
+.travel .container .cards {
+    display : flex;
+    flex-wrap : wrap;
+    gap : 2%;
+    justify-content : flex-end;
+    margin : 0 auto;
+    width : 100%;
+}
+
+.travel .cards .card {
+    flex-basis : 30%;
+    margin-left : 1%;
+    margin-right : 1%;
+    box-shadow : 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color : white;
+    border-radius : 5px;
+    margin-bottom : 40px !important;
+    transition : all 0.6s ease;
+}
+
+.travel .cards .card:hover {
+    background-color : #f9f9f9;
+}
+
+@media (max-width : 500px) {
+    .travel .cards .card {
+        flex-basis : 100%;
+    }
+}
+
+@media (min-width : 500px) and (max-width : 1010px) {
+    .travel .cards .card {
+        flex-basis : 45%;
+    }
+}
+
+.travel .cards .card table {
+    width : 100%;
+    border-collapse : collapse;
+}
+
+.travel .cards .card table tr {
+    width : 100%;
+    border-collapse : collapse;
+    text-align : center;
+}
+
+
+.travel .cards .card img {
+    width : 100%;
+    height : 200px;
+    object-fit : cover;
+    border-radius : 5px;
+    margin : 0 auto;
+    margin-bottom : 10px;
+}
+
+.travel .cards .card h3 {
+    text-align : right;
+    font-size : 25px;
+    font-weight : bold;
+    padding : 10px 20px;
+    color : var(--low-blue-color);
+}
+
+.travel .cards .card p {
+    text-align : right;
+    color : #666;
+    padding : 0 20px;
+    font-size : 18px;
+    margin : 10px 0;
+}
+
+.travel .cards .card .link {
+    background-color : var(--low-blue-color);
+    width : 160px;
+    height : 50px;
+    padding : 10px 20px;
+    margin : 20px auto;
+    margin-top : 20px;
+    text-align : center;
+    border-radius : 5%;
+    transition : all 0.4s ease;
+}
+
+.travel .cards .card .link a {
+    color : white;
+    text-decoration : none;
+    font-size : 18px;
+    padding : 10px 20px;
+    line-height : 30px;
+    text-align : center;
+}
+
+.travel .cards .card .link:hover {
+    background-color : var(--cyan-color);
+}
+
+/* Travel Agncey End */
+/* Power Start */
+
+.power {
+    padding-top : 50px;
+    padding-bottom : 50px;
+}
+
+.power .text {
+    text-align : center;
+    margin-bottom : 90px;
+}
+
+.power .text h2 {
+    font-weight : bold;
+    font-size : 40px;
+    margin-bottom : 20px;
+}
+
+.power .text p {
+    font-size : 20px;
+    color : #666;
+}
+
+.power .power-content {
+    display : flex;
+    flex-wrap : wrap;
+    justify-content : flex-end;
+    margin-top : 50px;
+    gap : 20px;
+}
+
+.power .power-content .content {
+    flex-basis : 30%;
+    margin-left : 1%;
+    margin-right : 1%;
+    background-color : white;
+    box-shadow : 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition : all 0.4s ease;
+    margin-bottom : 40px;
+    border-radius : 5px;
+}
+
+@media (max-width : 500px) {
+    .power .power-content .content {
+        flex-basis : 100%;
+    }
+    h2 {
+        font-size : 30px !important;
+    }
+    p {
+        font-size : 15px !important;
+    }
+}
+
+@media (min-width : 500px) and (max-width : 767px) {
+    h1,
+    h2 {
+        font-size : 35px !important;
+    }
+    p {
+        font-size : 17px !important;
+    }
+}
+
+@media (min-width : 500px) and (max-width : 1010px) {
+    .power .power-content .content {
+        flex-basis : 45%;
+    }
+}
+
+.power .power-content .content:hover {
+    background-color : #f9f9f9;
+}
+
+.power .power-content .content img {
+    width : 100%;
+    padding : 0 !important;
+    height : 200px;
+    object-fit : cover;
+    border-radius : 5px;
+    margin-bottom : 20px;
+}
+
+.power .power-content .content .text{
+    padding : 20px;
+    text-align : right;
+}
+.power .power-content .content h3 {
+    font-size : 25px;
+    font-weight : bold;
+    color : var(--low-blue-color);
+    margin-bottom : 10px;
+}
+
+.power .power-content .content table {
+    width : 100%;
+    border-collapse : collapse;
+    margin-bottom : 20px;
+}
+
+.power .power-content .content table tr {
+    width : 100%;
+    border-collapse : collapse;
+    text-align : center;
+}
+
+.power .power-content .content .link {
+    background-color : var(--low-blue-color);
+    width : 160px;
+    height : 50px;
+    padding : 10px 20px;
+    margin : 20px auto;
+    text-align : center;
+    border-radius : 5%;
+    transition : all 0.4s ease;
+}
+
+.power .power-content .content .link a {
+    color : white;
+    text-decoration : none;
+    font-size : 18px;
+    padding : 10px 20px;
+    line-height : 30px;
+    transition : all 0.4s ease;
+    text-align : center;
+}
+
+.power .power-content .content .link:hover {
+    background-color : var(--cyan-color);
+}
+
+/* Power End */
+/* Footer Start */
+
+.footer {
+    padding-top : 20px;
+    background-color : var(--low-blue-color);
+}
+
+.footer .text {
+    text-align : center;
+    color : white;
+    padding : 20px;
+    font-size : 20px;
+}
+
+.footer .text a {
+    margin : 10px 0;
+    display : block;
+    transition : all 0.4s ease;
+}
+
+.footer .text a:hover {
+    color : black;
+}
+
+/* Footer End */
