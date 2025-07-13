@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+body {
+    font-family : "Open Sans", sans-serif;
+}
+
+/* root values */
+
+:root {
+    --main-color : #f44336;
+    --red-color : #e91e63; /* Pink */
+    --cyan-color : #239dad; /* Cyan */
+    --low-blue-color : #2196f3; /* Light Blue */
+    --dark-blue-color : #3f51b5; /* Dark Blue */
+    --puprle-color : #9c27b0; /* Purple */
+    --green-color : #4caf50; /* Green */
+    - -text-color : #333; /* Dark Gray */
+    --font-family : 'Arial', sans-serif; /* Font Family */
+}
+
+/* Global styles */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* End of Gloable  */
+
+/* Contact Side Start */
+
+
+
+.contact i:hover {
+    color : var(--dark-blue-color);
+}
+
+/* Contact Side End */
+/* Header Start */
+
+.landing-contact {
+    padding-top : 50px;
+    padding-bottom : 50px;
+    height : 100vh;
+    background-image : url("../images/contact.png");
+    background-position : center;
+    background-size : cover;
+    background-color : #EEE;
+    transition : all 0.4s ease-in-out;
+    position : relative;
+}
+
+.landing-contact .header-area .logo {
+    width : 20%;
+}
+
+.landing-contact .header-area .logo img {
+    width : 250px;
+    margin-top : 15px;
+    cursor : pointer;
+    margin-left : -20px;
+}
+
+@media (max-width : 767px) {
+    .landing-contact .header-area .logo {
+        width : 50% !important;
+    }
+}
+
+.landing-contact .overlay {
+    position : absolute;
+    left : 0;
+    top : 0;
+    background-color : rgba(0, 0, 0, 0.7);
+    width : 100%;
+    height : 100%;
+    z-index : 1;
+}
+
+.landing-contact .header-area {
+    color : white;
+    display : flex;
+    justify-content : space-between;
+    position : relative;
+    z-index : 2;
+    padding : 0 20px;
+    align-items : center;
+}
+
+.landing-contact .header-area .logo a {
+    font-size : 45px;
+    font-weight : bold;
+    cursor : pointer;
+}
+
+@media (max-width : 500px) {
+    .landing-contact .header-area .logo a {
+        font-size : 30px;
+    }
+}
+
+.landing-contact .header-area .links .links-section {
+    display : flex;
+    width : 104%;
+    justify-content : flex-end;
+    margin-top : 10px;
+}
+
+@media (max-width : 767px) {
+    .landing-contact .header-area .links .links-section {
+        display : none;
+    }
+    .landing-contact .header-area .links .logo {
+        width : 50% !important;
+    }
+}
+
+.landing-contact .header-area .links .links-section li {
+    margin : 0;
+    padding : 0;
+}
+
+.landing-status .header-area .links .links-section li a {
+    font-size : 18px;
+    margin-right : 18px;
+    transition : all 0.4s ease;
+    font-size : 20px;
+}
+
+.landing-contact .header-area .links .links-section li a:hover {
+    color : var(--low-blue-color)
+}
+
+.landing-contact .header-area .links .toggle-menu {
+    width : 30px;
+    height : 20px;
+    position : relative;
+    top : -15px;
+    z-index : 10;
+    padding : 0 20px;
+    cursor : pointer;
+}
+
+.landing-contact .header-area .links .toggle-menu.menu-active::before {
+    position: absolute;
+    top: -60px;
+    background-color: #FFF;
+    z-index: 10000;
+    flex-direction: column;
+    right: 0;
+    width: 50%;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.landing-contact .header-area .links .links-container {
+    margin-top : 3px;
+    width : 100%;
+    position : relative;
+    top : 0px;
+    z-index : 1;
+    padding : 20px;
+}
+
+@media (max-width : 767px) {
+    .landing-contact .header-area .links .links-container.open {
+        position : absolute;
+        top : 80px;
+        background-color : #FFF;
+        z-index : 1000;
+        flex-direction : column;
+        left : 0;
+        width : 100%;
+        min-height : 200px;
+        padding : 10px;
+    }
+
+    .landing-contact .header-area .links-container.open .links-section {
+        display : flex;
+        flex-direction : column;
+        align-items : center;
+        width : 100%;
+    }
+
+    .landing-contact .header-area .links .links-section li  {
+        color : black;
+        margin : 10px 0;
+        width : 100%;
+        text-align : center;
+    }
+}
+
+.landing-contact .header-area .links .toggle-menu span {
+    width : 25px;
+    height : 3px;
+    background-color : white;
+    display : block;
+    margin : 4px 0 0 -10px;
+    transition : all 0.4s ease;
+}
+
+.landing-contact .header-area .links .toggle-menu.event {
+    margin-top : 25px;
+}
+
+.landing-contact .header-area .links .toggle-menu.event span{
+    background-color : var(--low-blue-color);
+}
+
+.landing-contact .header-area .links .toggle-menu.event span:first-child {
+    transform : rotate(45deg);
+    top : 6px;
+    position : absolute; 
+}
+
+.landing-contact .header-area .links .toggle-menu.event span:nth-child(2) {
+    display : none;
+}
+
+.landing-contact .header-area .links .toggle-menu.event span:last-child {
+    transform : rotate(-45deg);
+    top : 6px;
+    position : absolute; 
+}
+
+.landing-contact .text {
+    color : white;
+    z-index : 1;
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+    text-align : center;
+}
+
+.landing-contact .text .contact {
+    display : flex;
+    justify-content : center;
+    gap : 20px;
+}
+
+@media (max-width : 500px) {
+    .landing-contact  .text {
+    text-aling : right;
+    }
+    .landing-contact .text h2 {
+        font-size : 25px !important;
+    }
+    .landing-contact .text p {
+        font-size : 15px !important;
+    }
+    .landing-contact .text .links {
+        flex-direction : column;
+        gap : 15px;
+    }
+    .landing-contact .text .links a {
+        font-size : 12px !important;
+    }
+}
+
+.landing-contact .text h2 {
+    font-size : 45px;
+    margin-bottom : 20px;
+    font-weight : bold;
+}
+
+.landing-contact .text p {
+    font-size : 20px;
+    color : #dddd;
+}
+
+.landing-contact .text h1 span {
+    color : var(--low-blue-color);
+}
+
+.landing-contact .text .links a {
+    color: white;
+    display : inline-block;
+    margin : 0 10px;
+    background-color: var(--cyan-color);
+    width: 40px;
+    padding: 5px 8px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 10px 0;
+    border-radius: 25%;
+    transition: all 0.4s ease;
+}
+
+.landing-contact .text .links a:hover {
+    background-color : var(--low-blue-color);
+    color : white;
+}
+
+.landing-contact  .text h2 {
+    font-size : 45px;
+    margin-bottom : 20px;
+    font-weight : bold;
+}
+
+.landing-contact  .text p {
+    font-size : 20px;
+    line-height : 2;
+}
+
+
+/* Header End */
+/* Footer Start */
+
+.footer {
+    padding-top : 20px;
+    background-color : var(--cyan-color);
+}
+
+@media (max-width : 550px) {
+    .footer .text {
+        font-size : 15px !important;
+    }
+}
+
+.footer .text {
+    text-align : center;
+    color : white;
+    padding : 20px;
+    font-size : 20px;
+}
+
+.footer .text a {
+    margin : 10px 0;
+    display : block;
+    transition : all 0.4s ease;
+}
+
+.footer .text a:hover {
+    color : black;
+}
+
+/* Footer End */
